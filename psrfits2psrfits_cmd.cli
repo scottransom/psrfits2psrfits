@@ -1,0 +1,22 @@
+# Admin data
+
+Name psrfits2psrfits
+
+Usage "Converts 16-bit PSRFITS search-mode data to 8 or 4-bit PSRFITS"
+
+Version [exec date +%d%b%y]
+
+Commandline full_cmd_line
+
+# Options (in order you want them to appear)
+
+Int 	-b 	numbits  {The number of bits in each output sample (4 or 8)} \
+			-r 4 8  -d 8
+String	-o	outfile {Base name of the output psrfits file} \
+			-m
+Flag   	-i	invert	{Invert the band}
+
+# Rest of command line:
+
+Rest 		infiles {Input PSRFITS file names (in time order)} \
+			-c 1 100
